@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 export const Statistics = ({title, stats }) => {
     return (
         <StatsCard>
-            {title === undefined ? '' : <Title>{title}</Title>}
+            {title && <Title>{title}</Title>}
             <Stats>
                 {stats.map( item => (
                 <StatsItem key={item.id} quantity={stats.length} style={{backgroundColor: getRandomHexColor()}}>
